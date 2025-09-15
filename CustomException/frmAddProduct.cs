@@ -37,8 +37,22 @@ namespace CustomException
 
         }
 
+        // 6. Double click the frmAddProduct form to generate a Load event
+        // Create a string array named ListOfProductCategory.
         private void frmAddProduct_Load(object sender, EventArgs e)
         {
+            string[] ListOfProgram = new string[] {
+                "Beverages",
+                "Bread/Bakery",
+                "Canned/Jarred Goods",
+                "Dairy",
+                "Frozen Goods",
+                "Meat",
+                "Personal Care",
+                "Other"
+            };
+
+
 
         }
     }
