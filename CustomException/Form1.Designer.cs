@@ -1,6 +1,6 @@
 ﻿namespace CustomException
 {
-    partial class Form1
+    partial class frmAddProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTxtDescription = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Category = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,16 +38,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtPickerExpDate = new System.Windows.Forms.DateTimePicker();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.dtPickerMfgDate = new System.Windows.Forms.DateTimePicker();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.gridViewProductList = new System.Windows.Forms.DataGridView();
+            this.txtSellPrice = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,13 +60,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Product";
             // 
-            // richTextBox1
+            // richTxtDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(111, 198);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(551, 68);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.richTxtDescription.Location = new System.Drawing.Point(111, 198);
+            this.richTxtDescription.Name = "richTxtDescription";
+            this.richTxtDescription.Size = new System.Drawing.Size(551, 68);
+            this.richTxtDescription.TabIndex = 4;
+            this.richTxtDescription.Text = "";
             // 
             // label2
             // 
@@ -149,49 +149,41 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Quantity";
             // 
-            // comboBox2
+            // dtPickerExpDate
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(462, 104);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 11;
+            this.dtPickerExpDate.Location = new System.Drawing.Point(462, 150);
+            this.dtPickerExpDate.Name = "dtPickerExpDate";
+            this.dtPickerExpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPickerExpDate.TabIndex = 10;
             // 
-            // dateTimePicker2
+            // txtQuantity
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(462, 150);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 10;
+            this.txtQuantity.Location = new System.Drawing.Point(463, 65);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(199, 20);
+            this.txtQuantity.TabIndex = 9;
             // 
-            // textBox2
+            // cbCategory
             // 
-            this.textBox2.Location = new System.Drawing.Point(463, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 9;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(112, 107);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(200, 21);
+            this.cbCategory.TabIndex = 18;
             // 
-            // comboBox1
+            // dtPickerMfgDate
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 18;
+            this.dtPickerMfgDate.Location = new System.Drawing.Point(112, 150);
+            this.dtPickerMfgDate.Name = "dtPickerMfgDate";
+            this.dtPickerMfgDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPickerMfgDate.TabIndex = 17;
             // 
-            // dateTimePicker1
+            // txtProductName
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(112, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(113, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtProductName.Location = new System.Drawing.Point(113, 68);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(199, 20);
+            this.txtProductName.TabIndex = 16;
             // 
             // label9
             // 
@@ -203,50 +195,57 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Description";
             // 
-            // button1
+            // btnAddProduct
             // 
-            this.button1.Location = new System.Drawing.Point(561, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 30);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Add Product";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Location = new System.Drawing.Point(561, 276);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(102, 30);
+            this.btnAddProduct.TabIndex = 20;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // gridViewProductList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(111, 321);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(552, 152);
-            this.dataGridView1.TabIndex = 21;
+            this.gridViewProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewProductList.Location = new System.Drawing.Point(111, 321);
+            this.gridViewProductList.Name = "gridViewProductList";
+            this.gridViewProductList.Size = new System.Drawing.Size(552, 152);
+            this.gridViewProductList.TabIndex = 21;
             // 
-            // Form1
+            // txtSellPrice
+            // 
+            this.txtSellPrice.Location = new System.Drawing.Point(463, 107);
+            this.txtSellPrice.Name = "txtSellPrice";
+            this.txtSellPrice.Size = new System.Drawing.Size(199, 20);
+            this.txtSellPrice.TabIndex = 22;
+            // 
+            // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 496);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtSellPrice);
+            this.Controls.Add(this.gridViewProductList);
+            this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbCategory);
+            this.Controls.Add(this.dtPickerMfgDate);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dtPickerExpDate);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Category);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTxtDescription);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmAddProduct";
             this.Text = "Inventory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +254,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTxtDescription;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Category;
         private System.Windows.Forms.Label label3;
@@ -264,15 +263,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtPickerExpDate;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.DateTimePicker dtPickerMfgDate;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.DataGridView gridViewProductList;
+        private System.Windows.Forms.TextBox txtSellPrice;
     }
 }
 
