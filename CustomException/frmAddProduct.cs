@@ -16,7 +16,7 @@ namespace CustomException
         // 5. In the frmAddProduct class, declare the variables and set an access modifier
         private string _ProductName, _Category, _MfgDate, _ExpDate, _Description;
         private int _Quantity;
-        private double _Price;
+        private double _SellPrice;
 
         // 9. Binding source declared
         private BindingSource showProductList;
@@ -48,6 +48,22 @@ namespace CustomException
             if (!Regex.IsMatch(price.ToString(), @"^(\d*\.)?\d+$"))
                 throw new ArgumentException("Selling price must be a valid number.");
             return Convert.ToDouble(price);
+        }
+
+        // 10. Double click the Add Product button to generate a click event. Then, add the following code
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            _ProductName = Product_Name(txtProductName.Text);
+            _Category = cbCategory.Text;
+            _MfgDate = dtPickerMfgDate.Value.ToString("yyyy-MM-dd");
+            _ExpDate = dtPickerExpDate.Value.ToString("yyyy-MM-dd");
+            _Description = richTxtDescription.Text;
+            _Quantity = Quantity(txtQuantity.Text);
+            _SellPrice = SellingPrice(txtSellPrice.Text);
+            showProductList.Add(new ProductClass(_ProductName, _Category, _MfgDate,
+            _ExpDate, _SellPrice, _Quantity, _Description));
+            gridViewProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gridViewProductList.DataSource = showProductList;
         }
 
         private void label3_Click(object sender, EventArgs e)
