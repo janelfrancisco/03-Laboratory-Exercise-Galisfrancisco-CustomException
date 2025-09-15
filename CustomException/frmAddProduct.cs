@@ -40,7 +40,7 @@ namespace CustomException
         }
         public int Quantity(string qty)
         {
-            if (!Regex.IsMatch(qty, @"^[0-9]"))
+            if (!Regex.IsMatch(qty, @"^[0-9]+$"))
                 throw new NumberFormatException("Quantity must only contain numbers.");
             return Convert.ToInt32(qty);
         }
