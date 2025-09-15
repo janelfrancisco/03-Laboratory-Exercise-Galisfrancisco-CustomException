@@ -31,6 +31,7 @@ namespace CustomException
         // 8. Copy the methods in 03 Laboratory Exercise 2 – Method.txt file and paste it in the frmAddProduct class.
         // Exception added
 
+
         public string Product_Name(string name)
         {
             if (!Regex.IsMatch(name, @"^[a-zA-Z]+$"))
@@ -51,6 +52,8 @@ namespace CustomException
         }
 
         // 10. Double click the Add Product button to generate a click event. Then, add the following code
+
+        // challenge exercise : Exception handling added
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             try

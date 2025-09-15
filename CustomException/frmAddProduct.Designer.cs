@@ -54,6 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(29, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 30);
@@ -62,6 +63,7 @@
             // 
             // richTxtDescription
             // 
+            this.richTxtDescription.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.richTxtDescription.Location = new System.Drawing.Point(111, 198);
             this.richTxtDescription.Name = "richTxtDescription";
             this.richTxtDescription.Size = new System.Drawing.Size(551, 68);
@@ -151,6 +153,7 @@
             // 
             // dtPickerExpDate
             // 
+            this.dtPickerExpDate.CalendarMonthBackground = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dtPickerExpDate.Location = new System.Drawing.Point(462, 150);
             this.dtPickerExpDate.Name = "dtPickerExpDate";
             this.dtPickerExpDate.Size = new System.Drawing.Size(200, 20);
@@ -158,6 +161,7 @@
             // 
             // txtQuantity
             // 
+            this.txtQuantity.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtQuantity.Location = new System.Drawing.Point(463, 65);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(199, 20);
@@ -165,6 +169,7 @@
             // 
             // cbCategory
             // 
+            this.cbCategory.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(112, 107);
             this.cbCategory.Name = "cbCategory";
@@ -173,6 +178,7 @@
             // 
             // dtPickerMfgDate
             // 
+            this.dtPickerMfgDate.CalendarMonthBackground = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dtPickerMfgDate.Location = new System.Drawing.Point(112, 150);
             this.dtPickerMfgDate.Name = "dtPickerMfgDate";
             this.dtPickerMfgDate.Size = new System.Drawing.Size(200, 20);
@@ -180,6 +186,8 @@
             // 
             // txtProductName
             // 
+            this.txtProductName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProductName.Location = new System.Drawing.Point(113, 68);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(199, 20);
@@ -197,24 +205,31 @@
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddProduct.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Location = new System.Drawing.Point(561, 276);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(102, 30);
             this.btnAddProduct.TabIndex = 20;
             this.btnAddProduct.Text = "Add Product";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // gridViewProductList
             // 
+            this.gridViewProductList.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gridViewProductList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridViewProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewProductList.Location = new System.Drawing.Point(111, 321);
+            this.gridViewProductList.Location = new System.Drawing.Point(34, 321);
             this.gridViewProductList.Name = "gridViewProductList";
-            this.gridViewProductList.Size = new System.Drawing.Size(552, 152);
+            this.gridViewProductList.Size = new System.Drawing.Size(629, 152);
             this.gridViewProductList.TabIndex = 21;
             // 
             // txtSellPrice
             // 
+            this.txtSellPrice.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtSellPrice.Location = new System.Drawing.Point(463, 107);
             this.txtSellPrice.Name = "txtSellPrice";
             this.txtSellPrice.Size = new System.Drawing.Size(199, 20);
@@ -224,7 +239,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 496);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(700, 496);
             this.Controls.Add(this.txtSellPrice);
             this.Controls.Add(this.gridViewProductList);
             this.Controls.Add(this.btnAddProduct);
@@ -244,6 +260,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.richTxtDescription);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAddProduct";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
