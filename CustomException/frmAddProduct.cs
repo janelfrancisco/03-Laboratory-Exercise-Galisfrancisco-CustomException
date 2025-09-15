@@ -18,11 +18,14 @@ namespace CustomException
         private int _Quantity;
         private double _Price;
 
-
+        // 9. Binding source declared
+        private BindingSource showProductList;
 
         public frmAddProduct()
         {
             InitializeComponent();
+            // Binding source initialized
+            showProductList = new BindingSource();
         }
 
         // 8. Copy the methods in 03 Laboratory Exercise 2 – Method.txt file and paste it in the frmAddProduct class.
